@@ -1,28 +1,25 @@
 import React from "react";
-import PropTypes from "prop-types";
-import { Contact } from "./ContactTask";
 import { useState } from "react";
 
-const ComponentB = ({ contact }) => {
-  const [connect, setConnect] = useState(true);
+const ComponentB = (props) => {
+  const [connect, setConnect] = useState(props.conectado);
+
   const change = () => {
-    console.log("hola");
     setConnect(!connect);
   };
 
   return (
-    <div>
-      <h2>Name: {contact.name}</h2>
-      <h3>Surname: {contact.surname}</h3>
-      <h3>Email: {contact.email}</h3>
-      <button onClick={change}>Connected:</button>
-      {connect ? "Contacto en linea" : "Contacto No Disponible"}
+    <div className="componenteB">
+      <h2>Nombre: {props.name}</h2>
+      <h3>Apellido: {props.apellido}</h3>
+      <h3>Email: {props.email}</h3>
+
+      <button className="boton" onClick={change}>
+        {connect ? "desconectar" : "conectar"}
+      </button>
+      {connect ? <h4>En linea</h4> : <h4>Contacto no disponible</h4>}
     </div>
   );
-};
-
-ComponentB.propTypes = {
-  contact: PropTypes.instanceOf(Contact),
 };
 
 export default ComponentB;
