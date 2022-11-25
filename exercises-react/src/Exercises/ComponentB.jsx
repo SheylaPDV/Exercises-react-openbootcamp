@@ -13,7 +13,6 @@ const ComponentB = (props) => {
       <h2>Nombre: {props.name}</h2>
       <h3>Apellido: {props.apellido}</h3>
       <h3>Email: {props.email}</h3>
-
       <button className="boton" onClick={change}>
         {connect ? "desconectar" : "conectar"}
       </button>
