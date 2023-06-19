@@ -1,7 +1,7 @@
 import logo from "./logo.svg";
 import "./App.css";
-import ComponentA from "./Exercises/ComponentA";
-import Clock from "./Exercises/Clock";
+// import ComponentA from "./Exercises/ComponentA";
+import Contactos from "./Exercises/Lista/Contactos";
 
 function App() {
   return (
@@ -9,7 +9,8 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         {/* <ComponentA /> */}
-        <Clock />
+        {/* <Clock /> */}
+        <Contactos />
       </header>
     </div>
   );

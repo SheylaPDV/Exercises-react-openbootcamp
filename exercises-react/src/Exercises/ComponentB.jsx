@@ -16,7 +16,11 @@ const ComponentB = (props) => {
       <button className="boton" onClick={change}>
         {connect ? "desconectar" : "conectar"}
       </button>
-      {connect ? <h4>En linea</h4> : <h4>Contacto no disponible</h4>}
+      {connect ? (
+        <h4 style={{ color: "green" }}>En linea</h4>
+      ) : (
+        <h4>Contacto no disponible</h4>
+      )}
     </div>
   );
 };
